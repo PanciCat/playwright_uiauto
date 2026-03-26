@@ -1,5 +1,5 @@
 # Playwright UiAuto for Test 自动化测试框架
-# 使用claude code结合手搓生成，主要用于解决工作里跑ui自动化经常验证码识别失败的问题
+# claude code+手搓，用于解决工作里跑ui自动化经常验证码识别失败的问题
 
 基于 **Playwright + Pytest + Allure** 的 Web UI 自动化测试项目，采用 Page Object Model（POM）设计模式。
 
