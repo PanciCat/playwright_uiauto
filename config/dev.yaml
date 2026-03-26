@@ -1,0 +1,19 @@
+# dev 环境配置
+# 与 prod 的差异：
+#   - base_url / login_url 指向 dev 服务器（当前暂与 prod 相同，切换时修改此处）
+#   - username / password 使用 dev 专用账号（当前暂与 prod 相同）
+#   - headless 默认 false，便于本地调试；prod 推荐 true
+#   - slow_mo 默认 0，调试时可调大（如 500）放慢操作节奏
+#   - video 默认 off；retain-on-failure 表示仅失败时保留视频
+
+base_url: "http://vue.ruoyi.vip"
+no_backend: true # 当没有后台接口绕开验证码时，可用helper记录storage
+browser: "chromium"   # chromium | firefox | webkit
+headless: false
+video: "on"          # off | on | retain-on-failure
+tracing: true
+slow_mo: 0
+viewport: { width: 1920, height: 1080 }
+login_url: "http://1.1.1.1:1111/prod-api/auth/backendLogin"
+username: "top"
+password: "example"

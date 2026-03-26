@@ -1,0 +1,10 @@
+base_url: "http://1.1.1.1:1111/"
+browser: "chromium"   # chromium | firefox | webkit
+headless: false
+video: "off"  # off | on | retain-on-failure
+tracing: True
+slow_mo: 0
+viewport: { width: 1920, height: 1080 }
+login_url: "http://1.1.1.1:1111/prod-api/auth/backendLogin"
+username: "top"
+password: "example"

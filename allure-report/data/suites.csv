@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Wed Mar 25 09:59:22 CST 2026","Wed Mar 25 09:59:55 CST 2026","32338","tests.case_1","test_example_edit","","","","test_user_index","验证新增用户的完整操作流程。"
