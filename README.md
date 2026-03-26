@@ -136,7 +136,7 @@ encrypt_hex(word)              # AES-ECB 加密（密码加密）
 ```yaml
 # config/prod.yaml
 no_backend: false   # 开启自动鉴权
-login_url: "http://<YOUR_HOST>:<PORT>/prod-api/auth/backendLogin"
+login_url: "http://<YOUR_HOST>:<PORT>/prod/auth/backendLogin"
 username: "<your-username>"
 password: "<your-password>"
 ```
@@ -150,9 +150,9 @@ Session 启动（save_cookies fixture）
     │      POST login_url → 获取真实 token
     │
     ├─ 2. 注册 Mock 路由（拦截 3 个接口）
-    │      ├─ **/prod-api/auth/login         → 返回含真实 token 的 mock 响应
-    │      ├─ **/prod-api/ctuav/version/info → 返回版本信息
-    │      └─ **/prod-api/ctuav/user/getInfo → 返回用户信息
+    │      ├─ **/prod/auth/login         → 返回含真实 token 的 mock 响应
+    │      ├─ **/prod/**/version/info → 返回版本信息
+    │      └─ **/prod/**/user/getInfo → 返回用户信息
     │
     ├─ 3. UI 登录（Playwright）
     │      填写用户名 / 密码 / 验证码（固定值"1"，由 mock 通过）→ 点击登录
@@ -241,7 +241,7 @@ video: "on"                         # off | on | retain-on-failure
 tracing: true                       # 开启 trace 追踪
 slow_mo: 0                          # 操作间隔（毫秒），调试时可设为 500
 viewport: { width: 1920, height: 1080 }
-login_url: "http://<YOUR_HOST>:<PORT>/prod-api/auth/backendLogin"
+login_url: "http://<YOUR_HOST>:<PORT>/prod/auth/backendLogin"
 username: "<your-username>"
 password: "<your-password>"
 ```
